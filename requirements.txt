@@ -1,0 +1,10 @@
+streamlit
+transformers
+torch
+accelerate
+pillow
+opencv-python-headless
+pyngrok
+numpy
+qwen_vl_utils
+einops
