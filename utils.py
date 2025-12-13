@@ -21,7 +21,8 @@ def load_model():
     print(f"Loading model: {MODEL_ID}...")
     try:
         device_type = "cuda" if torch.cuda.is_available() else "cpu"
-        torch_dtype = torch.float16 if device_type == "cuda" else torch.float32
+        # Use bfloat16 for CPU to save memory (4B params * 4 bytes is too big for 16GB)
+        torch_dtype = torch.float16 if device_type == "cuda" else torch.bfloat16
         print(f"Using device: {device_type}, dtype: {torch_dtype}")
 
         processor = AutoProcessor.from_pretrained(MODEL_ID, trust_remote_code=True)
