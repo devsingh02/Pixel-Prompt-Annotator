@@ -1,3 +1,13 @@
+---
+title: Pixel Prompt Annotator
+emoji: ✨
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # ✨ Annotation Assistant
 
 ![Demo](https://github.com/devsingh02/Pixel-Prompt-Annotator/raw/main/demo.jpg)
