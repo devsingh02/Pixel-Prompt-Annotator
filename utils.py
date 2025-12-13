@@ -20,12 +20,16 @@ def load_model():
     """
     print(f"Loading model: {MODEL_ID}...")
     try:
+        device_type = "cuda" if torch.cuda.is_available() else "cpu"
+        torch_dtype = torch.float16 if device_type == "cuda" else torch.float32
+        print(f"Using device: {device_type}, dtype: {torch_dtype}")
+
         processor = AutoProcessor.from_pretrained(MODEL_ID, trust_remote_code=True)
         model = AutoModelForVision2Seq.from_pretrained(
             MODEL_ID,
             device_map="auto",
             trust_remote_code=True,
-            torch_dtype=torch.float16
+            torch_dtype=torch_dtype
         )
     except Exception as e:
         print(f"Error loading {MODEL_ID}: {e}")

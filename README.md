@@ -1,3 +1,13 @@
+---
+title: Pixel Prompt Annotator
+emoji: ✨
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
 # ✨ Annotation Assistant
 
 ![Demo](demo.jpg)
@@ -32,7 +42,13 @@ Don't just trust the box. The Assistant provides a **Reasoning Stream** explaini
 3.  Add your **Ngrok Authtoken** in the designated cell.
 4.  Run all cells. The app will launch via a public URL.
 
-### 💻 Option 2: Local System (Requires GPU)
+### 🤗 Option 2: Hugging Face Spaces (CPU/GPU)
+1.  Create a new Space on Hugging Face.
+2.  Select **Streamlit** as the SDK.
+3.  Upload the files from this repository.
+4.  The app will build and launch automatically.
+
+### 💻 Option 3: Local System (Requires GPU)
 1.  **Clone the Repo**:
     ```bash
     git clone https://github.com/devsingh02/Pixel-Prompt-Annotator.git
