@@ -1,6 +1,6 @@
 # ✨ Annotation Assistant
 
-![Demo](demo.jpg)
+![Demo](https://github.com/devsingh02/Pixel-Prompt-Annotator/raw/main/demo.jpg)
 
 ## Overview
 Annotation Assistant is a state-of-the-art **Vision-Language Object Detection** tool. It combines the power of **Qwen-VL (4B)** with a user-friendly interface to make labeled data creation effortless.
