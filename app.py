@@ -361,6 +361,10 @@ if prompt:
     if current_session['image'] is None:
         st.error("Please upload an image first.")
     else:
+        # Warning for HF Spaces Free Tier
+        if "cpu" in str(st.session_state.get('device', 'cpu')):
+             st.info("ℹ️ Running on CPU (Free Tier). Complex scenes may take 30-60s to analyze.")
+
         with st.status("Analyzing Scene...", expanded=True) as status:
             detections, updated_history, raw_text, metrics = utils.get_bounding_boxes(
                 current_session['image'], 

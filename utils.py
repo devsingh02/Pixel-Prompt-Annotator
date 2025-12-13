@@ -298,18 +298,30 @@ def draw_boxes(image: Image.Image, detections: list):
     
     font = None
     try:
-        font_names = ["arial.ttf", "LiberationSans-Regular.ttf", "DejaVuSans.ttf"]
-        for fn in font_names:
+        # Search paths for fonts (Linux/Windows)
+        font_paths = [
+            # Windows
+            "arial.ttf", "calibri.ttf", "seguiemj.ttf",
+            # Linux (Standard)
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "LiberationSans-Regular.ttf",
+            "DejaVuSans.ttf"
+        ]
+        
+        for fn in font_paths:
             try:
                 font = ImageFont.truetype(fn, scaled_font_size)
+                print(f"Loaded font: {fn}")
                 break
-            except:
+            except Exception as e:
                 continue
     except:
         pass
         
     if font is None:
         try:
+            print("Fallback to default font (Warning: Text may be tiny)")
             font = ImageFont.load_default()
         except:
              pass
