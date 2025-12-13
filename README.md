@@ -1,13 +1,3 @@
----
-title: Pixel Prompt Annotator
-emoji: ✨
-colorFrom: blue
-colorTo: green
-sdk: streamlit
-app_file: app.py
-pinned: false
----
-
 # ✨ Annotation Assistant
 
 ![Demo](demo.jpg)
