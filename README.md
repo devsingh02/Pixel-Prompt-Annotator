@@ -10,6 +10,8 @@ pinned: false
 
 # ✨ Annotation Assistant
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-FF6F61?style=for-the-badge)](https://devranx-pixel-prompt-annotator.hf.space/)
+
 ![Demo](https://github.com/devsingh02/Pixel-Prompt-Annotator/raw/main/demo.jpg)
 
 ## Overview
